@@ -1,0 +1,44 @@
+{
+  "name": "maren-build",
+  "version": "0.1.0",
+  "description": "build maren blog to _build directory",
+  "keywords": [
+    "maren",
+    "build",
+    "blog",
+    "theme",
+    "styles",
+    "scripts",
+    "css",
+    "js",
+    "hash",
+    "md5"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "author": "Pavel Bucka",
+  "license": "MIT",
+  "repository": "https://github.com/penge/maren-build",
+  "homepage": "https://maren.io",
+  "dependencies": {
+    "fs-extra": "8.1.0",
+    "md5-file": "4.0.0",
+    "readdirp": "^3.2.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "my-blog/",
+      "my-blog-dummy/",
+      "helpers/"
+    ]
+  }
+}
