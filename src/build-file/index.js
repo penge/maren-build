@@ -6,14 +6,10 @@ const fse = require('fs-extra');
  * and save html to "dest".
  */
 async function buildFile(src, dest, theme, renderFunction) {
-  try {
-    const content = await fse.readFile(src, 'utf-8');
-    const rendered = renderFunction(content, theme);
+  const content = await fse.readFile(src, 'utf-8');
+  const rendered = renderFunction(content, theme);
 
-    await fse.outputFile(dest, rendered);
-  } catch (e) {
-    return false;
-  }
+  await fse.outputFile(dest, rendered);
   return true;
 }
 
